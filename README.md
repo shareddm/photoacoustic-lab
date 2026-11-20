@@ -8,13 +8,17 @@ A browser-based 3D photoacoustic imaging and microscopy workbench for education 
 
 The public site offers **50 fixed procedural vessel images, seeds 1–50**. They are resampled from canonical 128 × 128 images so changing scan resolution preserves the same underlying phantom. These are synthetic educational demos. The source vessel dataset and simulated data files are not included in this repository.
 
-**Data downloads are disabled until the dataset is published.** A completed scan never enables the public download button. The future ZIP exporter is prepared for paired 2D PNG images, exact floating-point image arrays, clean/noisy PA signals, time axes, receiver coordinates, settings, and the following guides inside its `data/` folder:
+**The dataset will be available after publication of the accompanying paper. Download buttons are intentionally disabled until then.** A completed scan never enables the public download button. The future ZIP exporter is prepared for paired 2D PNG images, exact floating-point image arrays, clean/noisy PA signals, time axes, receiver coordinates, settings, and the following guides inside its `data/` folder:
 
 - [Data README and array contract](data/README.md)
 - [Physics and model assumptions](data/physics.md)
 - [Reconstruction guide for raster and array configurations](data/reconstruction_guide.md)
 
 The documentation describes the future package, rather than announcing a released dataset. The browser approximation is intended for education and exploring machine learning dataset design and photoacoustic image reconstruction. It is not a validated replacement for measured data or full-wave simulation.
+
+## Contact
+
+For questions about Photoacoustic Lab or the dataset, contact Shahriar Zeynali at [szeynali@purdue.edu](mailto:szeynali@purdue.edu).
 
 ## Open it
 
@@ -25,7 +29,7 @@ Open **docs/index.html** in a modern browser, or run `npm start` from this folde
 3. Set physical field size (default 50 x 50 mm), assigned depth, scan configuration, medium, receiver and laser parameters.
 4. Press **Scan** or **Apply & scan**. Changes remain pending until then.
 5. Rotate the 3D reconstruction, inspect the three orthogonal maximum-amplitude projections, and select an A-line or receiver channel in the oscilloscope.
-6. Read the data and reconstruction guides. Public data downloads remain disabled pending publication.
+6. Read the data and reconstruction guides. Public data downloads remain intentionally disabled until the accompanying paper is published.
 
 The input is resampled to the selected square image grid. Rectangular inputs are stretched to square and that operation is recorded. Original input files are never overwritten.
 
