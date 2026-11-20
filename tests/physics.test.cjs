@@ -1,0 +1,37 @@
+'use strict';
+const assert=require('node:assert/strict');
+const P=require('../docs/physics.js');
+const n=16,weights=P.generateVessels(n,42),reference=P.referenceFromWeights(weights,'bright-weaker');
+const base={...P.DEFAULTS,size:n,center_mhz:5,medium:'water',depth_mode:'plane',depth_mm:1,noise_rms:0,source_thickness_mm:.02};
+function sim(extra={},ref=reference){return P.simulate(ref,{...base,...extra});}
+const a=sim(),b=sim();
+assert.deepEqual(a.clean,b.clean,'same seed/config must give reproducible output');
+assert.deepEqual(P.generateVessels(32,71),P.generateVessels(32,71));
+assert.notDeepEqual(P.generateVessels(32,71),P.generateVessels(32,72));
+assert.equal(a.metadata.kwave_executed,false);
+assert.equal(a.noisy.length,n*n*a.nt);
+assert.ok(a.clean.some(x=>x!==0));
+const twice=sim({fluence_mj_cm2:20});
+for(let i=0;i<a.clean.length;i++)assert.ok(Math.abs(twice.clean[i]-2*a.clean[i])<1e-6,'linear fluence response');
+const zero=sim({fluence_mj_cm2:0});
+assert.ok(zero.clean.every(x=>x===0),'zero illumination must produce zero clean PA');
+const blank=sim({},new Float32Array(n*n).fill(1));
+assert.ok(blank.clean.every(x=>x===0),'bright-weaker white background must have zero absorber');
+const lowAbs=sim({wavelength_nm:800});
+assert.ok(Math.max(...a.p0)>Math.max(...lowAbs.p0),'532 vs 800 nm absorption follows OMLC');
+const tissue=sim({medium:'tissue',mu_eff_per_mm:1});
+assert.ok(Math.max(...tissue.p0)<Math.max(...a.p0),'tissue optical attenuation must reduce initial pressure');
+const deep=sim({depth_mm:2});
+assert.ok(Math.abs((deep.time[0]-a.time[0])-1/1.48)<1e-5,'one-way depth travel time, not pulse-echo factor two');
+const long=sim({pulse_ns:150});
+const peak=x=>x.reduce((v,w)=>Math.max(v,Math.abs(w)),0);
+assert.ok(peak(long.clean)<peak(a.clean),'longer pulse suppresses a fixed-energy high-frequency response');
+const noisy=sim({noise_rms:.01}),noisy2=sim({noise_rms:.01});
+assert.deepEqual(noisy.noisy,noisy2.noisy,'seeded measurement noise');
+assert.notDeepEqual(noisy.clean,noisy.noisy);
+assert.throws(()=>sim({depth_mode:'undulating',depth_mm:.2,depth_span_mm:1}),/Depth/);
+assert.throws(()=>sim({center_mhz:NaN}),/center_mhz/);
+assert.throws(()=>sim({wavelength_nm:1064}),/wavelength/);
+for(let p=0;p<n*n;p++){let max=0;for(let t=0;t<a.nt;t++)max=Math.max(max,Math.abs(a.noisy[p*a.nt+t]));assert.equal(a.map[p],max,'MAP must be computed from exported RF');}
+assert.ok(P.exportNPZ(a).length>1000);
+console.log('PASS: reproducibility, fluence linearity, blank/zero source, spectral absorption, attenuation, one-way timing, pulse duration, noise, validation, RF-derived MAP and NPZ packaging.');
