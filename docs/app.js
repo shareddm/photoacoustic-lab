@@ -60,7 +60,7 @@
     $('assumptions').replaceChildren();const title=document.createElement('strong');title.textContent='About this scan';$('assumptions').append(title);
     for(const warning of r.metadata.warnings){const p=document.createElement('p');p.textContent=warning;$('assumptions').append(p);}
     $('demo-seed').value=r.cfg.seed;
-    $('export-description').textContent='Data downloads are disabled until publication. The future ZIP pairs 2D PNG images and exact image arrays with '+(r.cfg.scan_config==='raster'?'raster A-lines':'per-receiver PA signals')+', receiver coordinates, settings, and data, physics and reconstruction guides.';
+    $('export-description').textContent='The future ZIP pairs 2D PNG images and exact image arrays with '+(r.cfg.scan_config==='raster'?'raster A-lines':'per-receiver PA signals')+', receiver coordinates, settings, and data, physics and reconstruction guides.';
     resizeVolume();viewer.mode=$('volume-mode').value;viewer.setResult(r);$('depth-stretch').value=String(viewer.stretch);drawScope();
     document.body.dataset.engine=r.metadata.engine;document.body.dataset.scanConfig=r.cfg.scan_config;document.body.dataset.ready='true';
   }
