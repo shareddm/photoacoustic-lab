@@ -1,8 +1,14 @@
 # Photoacoustic Lab — v1.1
 
-[Open Photoacoustic Lab](https://shareddm.github.io/photoacoustic-lab/) · [Source repository](https://github.com/shareddm/photoacoustic-lab)
+To try the Photoacoustics lab, visit here: [Open Photoacoustic Lab](https://shareddm.github.io/photoacoustic-lab/)
 
-A browser-based 3D photoacoustic imaging and microscopy workbench for education and paired synthetic-data generation. Static HTML/CSS/JavaScript, suitable for GitHub Pages, with a separate MATLAB k-Wave raster reference runner. No npm installation is needed for the interface.
+For contact and questions: [szeynali@purdue.edu](mailto:szeynali@purdue.edu)
+
+Cite the following work:
+
+Amir Asadollahi, Hamid Latifi, Shahriar Zeynali, Manojit Pramanik, and Hamed Qazvini. *Accuracy of peak-power compensation in fiber-guided and free-space acoustic-resolution photoacoustic microscopy*. Biomedical Optics Express 13(3), 1774–1783 (2022). [DOI](https://doi.org/10.1364/BOE.453475), [archived full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC8973166/).
+
+A browser-based 3D photoacoustic imaging and microscopy workbench for education and paired synthetic-data generation. Static HTML/CSS/JavaScript, suitable for GitHub Pages, with a separate MATLAB k-Wave raster reference runner. No npm installation is needed for the interface. [Source repository](https://github.com/shareddm/photoacoustic-lab)
 
 ## Public demo and dataset status
 
