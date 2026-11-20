@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="610" viewBox="0 0 960 610" role="img" aria-labelledby="title desc">
+<title id="title">Conceptual raster-scan acoustic-resolution photoacoustic microscopy system</title><desc id="desc">A Q-switched laser and beam splitter feed a monitor photodiode and a multimode fiber. The scanning head includes mirror, objective, opto-acoustic combiner and ultrasonic receiver. A sample sits inside water. Receiver signals pass through amplification to data acquisition and a computer.</desc>
+<defs><marker id="light" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#238561" stroke-width="1.4"/></marker><marker id="sound" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#ad6425" stroke-width="1.4"/></marker><marker id="signal" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 7 4 0 8" fill="none" stroke="#58758d" stroke-width="1.3"/></marker></defs>
+<rect width="960" height="610" rx="12" fill="#f4f8fb"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif" font-size="21" fill="#203b51" text-anchor="middle">
+<rect x="34" y="82" width="146" height="76" rx="9" fill="#e2f1e9" stroke="#79a88f"/><text x="107" y="111">Pulsed laser</text><text x="107" y="139" font-size="19" fill="#246e53">532 nm · 8 ns</text>
+<path d="M226 94 252 120 226 146 200 120Z" fill="#e1eaf0" stroke="#718fa3"/><text x="226" y="72" font-size="19" fill="#4c697f">Beam splitter</text>
+<path d="M181 120H199 M253 120H304" fill="none" stroke="#238561" stroke-width="3" marker-end="url(#light)"/>
+<ellipse cx="326" cy="120" rx="9" ry="39" fill="#3b778533" stroke="#638da1" stroke-width="2"/><text x="325" y="188" font-size="19" fill="#4c697f">Coupling lens</text>
+<path d="M337 120H370 C390 76 405 76 425 120S462 164 480 120 515 76 535 120H561" fill="none" stroke="#238561" stroke-width="3"/>
+<text x="452" y="60" font-size="19" fill="#4c697f">Multimode fiber</text>
+<path d="M562 120H766V192" fill="none" stroke="#238561" stroke-width="3" marker-end="url(#light)"/>
+<path d="M749 136 782 103" stroke="#687f92" stroke-width="6"/><text x="826" y="121" font-size="18" fill="#4c697f">Mirror</text>
+<rect x="565" y="79" width="294" height="272" rx="12" fill="none" stroke="#8fa6b8" stroke-width="1.5" stroke-dasharray="7 7"/><text x="710" y="38" fill="#46657b" font-size="20">Scanning head · X / Y</text>
+<ellipse cx="766" cy="211" rx="34" ry="8" fill="#406e8222" stroke="#638da1" stroke-width="2"/><text x="865" y="213" font-size="18" fill="#4c697f">Objective</text>
+<path d="M723 252H803L723 302Z" fill="#d2e1eb" stroke="#7091a7" stroke-width="1.7"/><path d="M727 306H808V256Z" fill="#c1d6e3" stroke="#7091a7" stroke-width="1.7"/>
+<text x="765" y="335" font-size="18" fill="#4c697f">Opto-acoustic combiner</text>
+<rect x="584" y="249" width="96" height="58" rx="8" fill="#f0e6d9" stroke="#ac875e"/><path d="M680 257V299" stroke="#a66a2b" stroke-width="5"/><text x="630" y="274" font-size="19">50 MHz</text><text x="630" y="297" font-size="16">receiver</text>
+<path d="M766 220V424" fill="none" stroke="#238561" stroke-width="3" marker-end="url(#light)"/>
+<path d="M779 421V279H689" fill="none" stroke="#ad6425" stroke-width="3" marker-end="url(#sound)"/>
+<path d="M602 365V477H893V365" fill="#1e647322" stroke="#789da8" stroke-width="2"/><path d="M604 373Q621 365 638 373T672 373 706 373 740 373 774 373 808 373 842 373 876 373" fill="none" stroke="#588c9c" stroke-width="1.5"/>
+<rect x="615" y="431" width="265" height="34" rx="3" fill="#c5a99b" opacity=".8"/><path d="M665 450q40-29 76-8t70-2" fill="none" stroke="#9c582b" stroke-width="5"/><text x="748" y="409" font-size="19" fill="#456f7c">Water coupling</text><text x="825" y="494" font-size="18" fill="#4c697f">Sample</text>
+<path d="M226 147V227" fill="none" stroke="#238561" stroke-width="3" marker-end="url(#light)"/>
+<rect x="170" y="235" width="115" height="67" rx="8" fill="#e3eaf2" stroke="#7f99b1"/><text x="227" y="263">Fast PD</text><text x="227" y="288" font-size="17" fill="#4a667f">Pulse monitor</text>
+<rect x="448" y="514" width="130" height="49" rx="8" fill="#e3ebf3" stroke="#8ba1b5"/><text x="513" y="545">Amplifier</text>
+<rect x="646" y="514" width="108" height="49" rx="8" fill="#e3ebf3" stroke="#8ba1b5"/><text x="700" y="545">DAQ</text>
+<rect x="817" y="514" width="103" height="49" rx="8" fill="#e3ebf3" stroke="#8ba1b5"/><text x="868" y="545">PC</text>
+<path d="M584 278H513V505 M580 538H636 M756 538H808" fill="none" stroke="#58758d" stroke-width="2" marker-end="url(#signal)"/>
+<path d="M227 303V582H700V568" fill="none" stroke="#58758d" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#signal)"/><text x="345" y="572" font-size="17" fill="#536f85">Trigger / pulse monitoring</text>
+</g></svg>
