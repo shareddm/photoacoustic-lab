@@ -1,0 +1,12 @@
+{
+  "name": "photoacoustic-lab",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Photoacoustic imaging and microscopy lab for synthetic vascular datasets, machine learning and image reconstruction",
+  "scripts": {
+    "start": "python3 -m http.server 8765 --bind 127.0.0.1 --directory docs",
+    "test": "node tests/run.cjs",
+    "examples": "node scripts/generate_examples.cjs",
+    "prepare:publication": "node scripts/prepare_publication.cjs"
+  }
+}
