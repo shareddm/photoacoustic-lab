@@ -1,6 +1,8 @@
 # Photoacoustic Lab data guide
 
-**Release status: dataset downloads are not published.** The website currently offers 50 procedural vessel examples (seeds 1–50) for interactive investigation. This folder documents the paired-data format prepared for a future release. No training acquisitions are distributed with this public demo.
+**Release status: the dataset will be available after publication of the accompanying paper. Download buttons are intentionally disabled until then.** The website currently offers 50 procedural vessel examples (seeds 1–50) for interactive investigation. This folder documents the paired-data format prepared for a future release. No training acquisitions are distributed with this public demo.
+
+Questions about the lab or dataset: Shahriar Zeynali, [szeynali@purdue.edu](mailto:szeynali@purdue.edu).
 
 ## What a future acquisition download contains
 

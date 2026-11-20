@@ -1,6 +1,6 @@
 # Reconstruction guide: images, signals and receiver geometry
 
-**Dataset release is pending.** This guide describes the self-contained acquisition bundles prepared for a future release. The current website is an interactive demo with 50 fixed procedural vessel images and no dataset download.
+**The dataset will be available after publication of the accompanying paper. Downloads are intentionally disabled until then.** This guide describes the self-contained acquisition bundles prepared for a future release. The current website is an interactive demo with 50 fixed procedural vessel images and no dataset download.
 
 ## Start with axes and a target
 
